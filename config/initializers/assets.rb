@@ -15,4 +15,5 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 
 Rails.application.config.assets.precompile += %w[*.png *.jpeg *.jpg *.gif]
 Rails.application.config.assets.precompile += %w( lake.jpg )
+Rails.application.config.assets.precompile += %w( lake2.jpeg )
 
