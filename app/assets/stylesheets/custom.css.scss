@@ -1,2 +1,58 @@
+// $navbar-default-bg: #08088A;
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+#logo {
+
+  float: left;
+  font-size: 1.8em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+#logo:hover {
+  color: rgb(113, 243, 26);
+  // text-decoration: none;
+}
+
+.center {
+
+  text-align: center;
+}
+
+.jumbotron {
+
+  background-image: asset-url('avila.jpg') ;
+  background-size: cover;
+  height: 550px;
+}
+
+footer {
+
+  margin-bottom: 10px;
+  border-top: 1px solid #eaeaea;
+  padding-top: 10px;
+  color: #777;
+}
+
+footer a:hover {
+
+  color: #222;
+}
+
+footer small {
+
+  float:left;
+}
+
+footer ul {
+  float: right;
+  list-style:none;
+}
+footer ul li {
+  float: left;
+  margin-left: 15px;
+}
