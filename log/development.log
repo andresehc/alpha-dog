@@ -9238,3 +9238,829 @@ Processing by UsersController#new as HTML
 Completed 200 OK in 158ms (Views: 154.3ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/2/edit" for 127.0.0.1 at 2018-04-01 05:35:02 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/2/edit"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users/2/edit" for 127.0.0.1 at 2018-04-01 05:37:53 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 420ms (Views: 389.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/users/2/edit" for 127.0.0.1 at 2018-04-01 05:42:32 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.7ms)
+  Rendered users/edit.html.erb within layouts/application (19.4ms)
+  Rendered layouts/_navigation.html.erb (2.2ms)
+  Rendered layouts/_messages.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 212ms (Views: 208.0ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/users/2" for 127.0.0.1 at 2018-04-01 05:45:05 -0400
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"R2umT0m2njHZJGPum/Sz2fYGZNjwSi+qOpPr6gaPEV3rEwMjeGRxwWIHOaWge238KcJwux4JLNuAv2uPmQ5oWw==", "user"=>{"username"=>"erPepe", "email"=>"elpep1234e@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Update my information", "id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 212ms (ActiveRecord: 1.8ms)
+
+
+  
+NameError (undefined local variable or method `article_params' for #<UsersController:0x00007f3efc0b0d00>
+Did you mean?  article_path):
+  
+app/controllers/users_controller.rb:49:in `update'
+Started GET "/users/2/edit" for 127.0.0.1 at 2018-04-01 05:45:48 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.9ms)
+  Rendered users/edit.html.erb within layouts/application (8.2ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 124ms (Views: 100.5ms | ActiveRecord: 2.4ms)
+
+
+Started PATCH "/users/2" for 127.0.0.1 at 2018-04-01 05:46:01 -0400
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gTVnTYBx0l9uuwGoxBvwZjK0x0uiQCM3roHIYOqmwkEtTcIhsaM9r9WYW+P/lC5D7XDTKEwDIEYUrUgFdSe7Rw==", "user"=>{"username"=>"erPepe", "email"=>"elpep1234@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Update my information", "id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) AND ("users"."id" != ?) LIMIT ?[0m  [["username", "erPepe"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND ("users"."id" != ?) LIMIT ?[0m  [["email", "elpep1234@gmail.com"], ["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (2.9ms)[0m  [1m[33mUPDATE "users" SET "email" = ?, "password_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["email", "elpep1234@gmail.com"], ["password_digest", "$2a$10$YJH0UeeckoFDmDUPSaOc6.pUUyQQ29RVHh6/nAtfMx2lwra11if5m"], ["updated_at", "2018-04-01 09:46:01.375144"], ["id", 2]]
+  [1m[35m (63.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 165ms (ActiveRecord: 67.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2018-04-01 05:46:01 -0400
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered articles/index.html.erb within layouts/application (37.0ms)
+  Rendered layouts/_navigation.html.erb (1.5ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 148ms (Views: 139.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-01 05:48:15 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_messages.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (1.3ms)
+Completed 200 OK in 113ms (Views: 111.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-01 05:48:35 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 113ms (Views: 111.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2018-04-01 05:48:37 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.6ms)
+  Rendered users/new.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 90ms (Views: 88.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-01 05:48:41 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 88ms (Views: 86.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2018-04-01 05:48:43 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.8ms)
+  Rendered users/new.html.erb within layouts/application (5.8ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 102ms (Views: 100.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-04-01 05:49:10 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v4rAs8igUlC+bUqj12NqRp/ZH7h6/T3zt2m3RaqJPDghQ55mj0sFHUvgqRIXMmCP4flnGoIMr6DydFBX+EiNqQ==", "user"=>{"username"=>"Pepe Perez", "email"=>"pepeperez@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Sign Up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "Pepe Perez"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "pepeperez@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?)[0m  [["username", "Pepe Perez"], ["email", "pepeperez@gmail.com"], ["created_at", "2018-04-01 09:49:10.381490"], ["updated_at", "2018-04-01 09:49:10.381490"], ["password_digest", "$2a$10$9iNntjol.8CjfXQTVD3oQ.TqKkNC5JBNwLO04G45jzFQpE4bDp84G"]]
+  [1m[35m (70.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 164ms (ActiveRecord: 72.8ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2018-04-01 05:49:10 -0400
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered articles/index.html.erb within layouts/application (10.2ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 82ms (Views: 79.6ms | ActiveRecord: 0.5ms)
+
+
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/" for 127.0.0.1 at 2018-04-01 05:50:27 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 84ms (Views: 82.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2018-04-01 05:50:30 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.6ms)
+  Rendered users/new.html.erb within layouts/application (14.0ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 77ms (Views: 75.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-01 05:50:34 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 95ms (Views: 93.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-01 05:50:36 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 62ms (Views: 60.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-01 05:53:43 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 89ms (Views: 87.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-01 05:54:36 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 88ms (Views: 86.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-01 05:55:26 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 86ms (Views: 84.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-01 05:56:27 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 74ms (Views: 72.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-01 05:56:28 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 79ms (Views: 77.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-01 05:56:29 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 79ms (Views: 77.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-01 05:56:57 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 88ms (Views: 86.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-01 05:56:57 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 81ms (Views: 79.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-01 05:56:58 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 74ms (Views: 72.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-01 05:57:34 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 71ms (Views: 69.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-01 05:57:34 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (1.1ms)
+Completed 200 OK in 94ms (Views: 92.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-01 05:57:34 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 77ms (Views: 75.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-01 05:57:54 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 74ms (Views: 72.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-01 05:57:56 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 74ms (Views: 71.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-01 05:58:20 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 64ms (Views: 62.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-01 06:00:04 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 69ms (Views: 67.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-01 06:00:05 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 63ms (Views: 62.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-01 06:01:04 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 89ms (Views: 87.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-01 06:03:17 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 78ms (Views: 76.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-01 06:06:06 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 83ms (Views: 82.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-01 06:06:50 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 67ms (Views: 64.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2018-04-01 06:06:54 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.6ms)
+  Rendered users/new.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_navigation.html.erb (1.6ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 91ms (Views: 89.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-01 06:06:57 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 66ms (Views: 64.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-01 06:09:18 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 259ms (Views: 257.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-01 06:09:38 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 80ms (Views: 78.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-01 06:10:54 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 84ms (Views: 83.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-01 06:11:11 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 70ms (Views: 67.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-01 06:11:13 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 103ms (Views: 102.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-01 06:11:14 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 101ms (Views: 99.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-01 06:11:27 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 94ms (Views: 92.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-01 06:13:19 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 77ms (Views: 76.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-01 06:13:22 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 79ms (Views: 77.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-01 06:13:48 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 78ms (Views: 75.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-01 06:13:49 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 75ms (Views: 73.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-01 06:14:22 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 65ms (Views: 64.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/2/edit" for 127.0.0.1 at 2018-04-01 06:15:30 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (99.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.5ms)
+  Rendered users/edit.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (1.2ms)
+Completed 200 OK in 284ms (Views: 136.9ms | ActiveRecord: 99.9ms)
+
+
+Started PATCH "/users/2" for 127.0.0.1 at 2018-04-01 06:15:35 -0400
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bi9UmgiCJV21uy2KZ6a7ipPg8+SzovGue2jaP66mRCHCV/H2OVDKrQ6Yd8FcKWWvTCTnh13h8t/BRFpaMSc9Jw==", "user"=>{"username"=>"erPepe", "email"=>"elpep1234@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Update my information", "id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (17.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) AND ("users"."id" != ?) LIMIT ?[0m  [["username", "erPepe"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND ("users"."id" != ?) LIMIT ?[0m  [["email", "elpep1234@gmail.com"], ["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 53ms (ActiveRecord: 18.3ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2018-04-01 06:15:35 -0400
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered articles/index.html.erb within layouts/application (25.9ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 131ms (Views: 122.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/2/edit" for 127.0.0.1 at 2018-04-01 06:15:54 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.8ms)
+  Rendered users/edit.html.erb within layouts/application (6.9ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 102ms (Views: 98.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/8/edit" for 127.0.0.1 at 2018-04-01 06:15:58 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (1.6ms)
+  Rendered users/edit.html.erb within layouts/application (6.6ms)
+  Rendered layouts/_navigation.html.erb (1.7ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.1ms)
+Completed 200 OK in 140ms (Views: 137.2ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/users/8" for 127.0.0.1 at 2018-04-01 06:16:07 -0400
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4lo6arxjPC0WMvnOKe8+sHyb5Mtszcs4r+WufKT+R/5OIp8GjbHT3a0Ro4USYOCVo1/wqIKOyEkVyS4ZO38++A==", "user"=>{"username"=>"erpeKJpe", "email"=>"elpedddddddddpgmailcom", "password"=>"[FILTERED]"}, "commit"=>"Update my information", "id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) AND ("users"."id" != ?) LIMIT ?[0m  [["username", "erpeKJpe"], ["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND ("users"."id" != ?) LIMIT ?[0m  [["email", "elpedddddddddpgmailcom"], ["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering users/edit.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.9ms)
+  Rendered users/edit.html.erb within layouts/application (5.2ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 341ms (Views: 143.9ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/users/8" for 127.0.0.1 at 2018-04-01 06:16:21 -0400
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7WMerD6BoGOftKLWbExdq4jgYXByPp8Ae0H1izcLXppBG7vAD1NPkySX+J1Xw4OOVyR1E5x9nHHBbXXuqIonnA==", "user"=>{"username"=>"erpeKJpe", "email"=>"elpedddddddddp@mail.com", "password"=>"[FILTERED]"}, "commit"=>"Update my information", "id"=>"8"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) AND ("users"."id" != ?) LIMIT ?[0m  [["username", "erpeKJpe"], ["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND ("users"."id" != ?) LIMIT ?[0m  [["email", "elpedddddddddp@mail.com"], ["id", 8], ["LIMIT", 1]]
+  [1m[35mSQL (42.0ms)[0m  [1m[33mUPDATE "users" SET "email" = ?, "password_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["email", "elpedddddddddp@mail.com"], ["password_digest", "$2a$10$xIeGdzp3NBxQcEPbUj2S1.RZD4KKnFETPuF3agBYoD2KdyTb3yrM6"], ["updated_at", "2018-04-01 10:16:21.168934"], ["id", 8]]
+  [1m[35m (134.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 298ms (ActiveRecord: 177.6ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2018-04-01 06:16:21 -0400
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered articles/index.html.erb within layouts/application (18.0ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 106ms (Views: 103.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2018-04-01 06:20:46 -0400
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered articles/index.html.erb within layouts/application (18.1ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 109ms (Views: 106.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/2/edit" for 127.0.0.1 at 2018-04-01 06:30:45 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (53.0ms)
+  Rendered users/edit.html.erb within layouts/application (56.5ms)
+Completed 500 Internal Server Error in 68ms (ActiveRecord: 0.4ms)
+
+
+  
+SyntaxError (/home/andres/Documents/RoR /RoR_Rails/alpha-dog/app/views/users/_form.html.erb:33: syntax error, unexpected ',', expecting ')'
+... Up" ,"Update my information"),  class:'btn btn-primary btn-...
+...                              ^):
+  
+app/views/users/_form.html.erb:33: syntax error, unexpected ',', expecting ')'
+app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb__284020570277035180_69954361299860'
+Started GET "/users/2/edit" for 127.0.0.1 at 2018-04-01 06:31:42 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (1.0ms)
+  Rendered users/edit.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/home/andres/Documents/RoR /RoR_Rails/alpha-dog/app/views/users/_form.html.erb:33: syntax error, unexpected ',', expecting ':'
+...@user.new_record? ? "Sign Up" ,"Update my information"),  cl...
+...                              ^
+/home/andres/Documents/RoR /RoR_Rails/alpha-dog/app/views/users/_form.html.erb:33: syntax error, unexpected tLABEL
+...pdate my information"),  class:'btn btn-primary btn-lg' );@o...
+...                         ^~~~~~
+/home/andres/Documents/RoR /RoR_Rails/alpha-dog/app/views/users/_form.html.erb:33: syntax error, unexpected ')', expecting keyword_end
+...lass:'btn btn-primary btn-lg' );@output_buffer.safe_append='
+...                              ^
+/home/andres/Documents/RoR /RoR_Rails/alpha-dog/app/views/users/_form.html.erb:41: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/users/_form.html.erb:33: syntax error, unexpected ',', expecting ':'
+app/views/users/_form.html.erb:33: syntax error, unexpected tLABEL
+app/views/users/_form.html.erb:33: syntax error, unexpected ')', expecting keyword_end
+app/views/users/_form.html.erb:41: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb__284020570277035180_69954360288100'
+Started GET "/users/2/edit" for 127.0.0.1 at 2018-04-01 06:32:42 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (1.1ms)
+  Rendered users/edit.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.3ms)
+
+
+  
+SyntaxError (/home/andres/Documents/RoR /RoR_Rails/alpha-dog/app/views/users/_form.html.erb:33: syntax error, unexpected ',', expecting ')'
+... Up": "Update my information"),  class:'btn btn-primary btn-...
+...                              ^):
+  
+app/views/users/_form.html.erb:33: syntax error, unexpected ',', expecting ')'
+app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb__284020570277035180_69954265508780'
+Started GET "/users/2/edit" for 127.0.0.1 at 2018-04-01 06:33:19 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (2.2ms)
+  Rendered users/edit.html.erb within layouts/application (4.4ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.3ms)
+
+
+  
+SyntaxError (/home/andres/Documents/RoR /RoR_Rails/alpha-dog/app/views/users/_form.html.erb:33: syntax error, unexpected ',', expecting ')'
+...Up" : "Update my information"),  class:'btn btn-primary btn-...
+...                              ^):
+  
+app/views/users/_form.html.erb:33: syntax error, unexpected ',', expecting ')'
+app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb__284020570277035180_69954388335860'
+Started GET "/users/2/edit" for 127.0.0.1 at 2018-04-01 06:34:53 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (11.2ms)
+  Rendered users/_form.html.erb (47.1ms)
+  Rendered users/edit.html.erb within layouts/application (52.6ms)
+  Rendered layouts/_navigation.html.erb (2.6ms)
+  Rendered layouts/_messages.html.erb (2.4ms)
+  Rendered layouts/_footer.html.erb (2.1ms)
+Completed 200 OK in 369ms (Views: 358.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2018-04-01 06:34:58 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (2.6ms)
+  Rendered users/new.html.erb within layouts/application (28.9ms)
+  Rendered layouts/_navigation.html.erb (3.1ms)
+  Rendered layouts/_messages.html.erb (2.4ms)
+  Rendered layouts/_footer.html.erb (2.5ms)
+Completed 200 OK in 474ms (Views: 460.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2018-04-01 06:35:34 -0400
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.8ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered articles/index.html.erb within layouts/application (35.4ms)
+  Rendered layouts/_navigation.html.erb (1.7ms)
+  Rendered layouts/_messages.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (1.3ms)
+Completed 200 OK in 248ms (Views: 242.8ms | ActiveRecord: 1.3ms)
+
+
