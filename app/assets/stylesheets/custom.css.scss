@@ -15,7 +15,7 @@
 
 #logo:hover {
   color: rgb(113, 243, 26);
-  // text-decoration: none;
+  text-decoration: none;
 }
 
 .center {
@@ -66,6 +66,8 @@ footer ul li {
 .description {
   
   margin-top: 0;
+  // margin-left: 20px;
+  // margin-right: auto;
 }
 
 .article-title {
@@ -90,5 +92,21 @@ footer ul li {
 .article-actions {
   border-top: 1px solid #eaeaea;
   padding-top: 5px;
+
+}
+
+.user-info{
+list-style:none;
+text-decoration: none;
+font-size: 18px;
+// border: 1px solid black;
+
+}
+
+#user-footer {
+  border-top: 1px solid #eaeaea;
+  margin-top: 12px;
+  padding-top: 12px;
+  font-size:15px;
 
 }
