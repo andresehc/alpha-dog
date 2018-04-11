@@ -1,7 +1,6 @@
 <div class="container">
   <% obj.each do |article|%>
     <div class="row">
-      <!-- <div class="col-md-2 "></div> -->
       <div class="col-xs-8 well col-xs-offset-2 ">
         <div class= "well well-xs">
           <div class="col article-title">
@@ -18,6 +17,11 @@
               </small>
             </div> 
           </div>
+          <% if article.categories.any?%>
+            <p>Categories: 
+              <%= render "categories/category", obj: article%>
+            </p>
+          <%end%>
           <% if logged_in? && (current_user == article.user || current_user.admin?)%> 
             <div class="article-actions">
               <%= link_to "Edit this article", edit_article_path(article), class:"btn btn-warning"%>
@@ -27,9 +31,7 @@
             </div>
           <%end%> 
         </div>
-        
       </div>
-      <!-- <div class="col-md-2 "></div> -->
     </div> 
   <%end%>
 </div>

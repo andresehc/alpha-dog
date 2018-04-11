@@ -1,15 +1,18 @@
 <h1 align="center">All categories</h1>
-<div class="container">
+
   <% Category.all.each do |category|%>
     <div class="row">
-      <div class="col-xs-8 well col-xs-offset-2 ">
+      <div class="col-xs-4 well col-xs-offset-4 ">
         <div class= "well well-xs">
-          <div class="col article-title">
+          <div align="center" class="col article-title">
             <strong><%= link_to "#{category.name}", category_path(category)%></strong>
+          </div >
+          <div align="center">
+            <small ><%= pluralize(category.articles.count, "article")%></small>
           </div>
         </div>
       </div>
     </div> 
   <%end%>
-</div>
+
 
